@@ -10,10 +10,10 @@ With no cure in the immediate future and no immediate possibility of vaccine dev
  
 The Susceptible-Infected-Recovered/Removed (__SIR__) model is a very basic model in Epidemiology to predict the spread of an infectious disease. The susceptible compartment consists of people who are vulnerable to the disease, and in the case of Covid-19, it is the entire population except those who have gained immunity after recovering. The basic SIR model calculates the rate of susceptibility, rate of infected, rate of removed (recovered + dead) by considering the solution of the function where Y<sub>t</sub><sup>I</sup> and Y<sub>t</sub><sup>R</sup> (proportions of infected and removed state at time t) follows a Beta-Dirichlet state-space model (BDSSM). A fourth-order approximation is then applied to the solution. The differential equations governing the model are:
 
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_model.png">
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_eq_1.png">
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_model_soln.png">
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/priors.png">
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_model.png" height=200>
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_eq_1.png" height=400>
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/SIR_model_soln.png" height=300>
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/priors.png" height=100>
 
 *Source of images: [eSIR GitHub](https://github.com/lilywang1988/eSIR)*
 
@@ -30,16 +30,16 @@ In the eSIR model, a time-dependent Transmission rate modifier, π(t) ∈ [0,1] 
 * __Model 1 - a SIR model with a time-varying transmission rate__
 π(t) is introduced to modify the transmission rate β dynamically. The function can either be stepwise or exponential. The main aim of using this model is to measure the effectiveness of the measures taken by the government to lower the rate of transmission.
 
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model1.png">
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model1%20(1).png">
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model1.png" height=400>
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model1%20(1).png" height=200>
 
 * __Model 2 - SIR with time-varying quarantine__
 A Dirac Delta function Φ is introduced along with changing time. At the changing time, we have some susceptible subjects moved to the quarantine stage. In this model, we do not tend to decrease the transmission rate. We let the proportion of the susceptible subjects decrease. 
 
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model2.png">
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model2.png" height=300>
 
 * __Model 3 - SIR with a time-varying subset of population immunized with antibody positivity__
 An antibody compartment (A) is introduced to address the under-reporting issue where people develop antibodies after being infected with no confirmation by tests.
 
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model3.png">
-<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model3(1).png">
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model3.png" height=200>
+<img src="https://github.com/Nitin1901/Indian-eSIR-model/blob/master/Assets/model3(1).png" height=100>
